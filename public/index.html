@@ -1,13 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todos os Itens</title>
-    <script src="script.js"></script>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Psicologia para Todos</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
-<body>
-    
+
+<body data-page="home">
+
+  <header class="sticky-top">
+    <nav class="navbar navbar-expand-md navbar-custom">
+      <div class="container">
+        <a class="navbar-brand logo-text" href="index.html">
+          Psicologia <span>para Todos</span>
+        </a>
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
+                aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link nav-link-custom active" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#destaques">Destaques</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#psicologos">Psicólogos</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-custom" href="#sobre-aluno">Sobre</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="banner d-flex align-items-center justify-content-center">
+      <div class="banner-content text-center p-4 rounded">
+        <h1 class="fw-bold mb-3">Cuide da sua saúde mental</h1>
+        <p class="mb-0">Atendimento psicológico online com praticidade e segurança.</p>
+      </div>
+    </section>
+
+    <section class="py-5 bg-white">
+      <div class="container text-center">
+        <h2 class="mb-3 section-title">Sobre o Psicologia para Todos</h2>
+        <p class="lead text-muted mx-auto" style="max-width: 700px;">
+          Somos uma plataforma dedicada a conectar pessoas a profissionais de psicologia qualificados.
+          Acreditamos que o cuidado com a saúde mental é essencial e deve ser acessível a todos,
+          independentemente de onde você esteja.
+        </p>
+      </div>
+    </section>
+
+    <section id="destaques" class="py-4 bg-fundo-sec">
+      <div class="container">
+        <h2 class="mb-1 section-title">Itens em Destaque</h2>
+        <p class="text-muted mb-3" style="font-size:0.88rem;">Profissionais selecionados para você</p>
+
+        <div id="carouselDestaques" class="carousel slide carousel-fade" data-bs-ride="carousel">
+          <div class="carousel-indicators" id="carousel-indicators"></div>
+          <div class="carousel-inner" id="carousel-inner"></div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselDestaques" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselDestaques" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Próximo</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="psicologos" class="py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-4 section-title" style="text-align:center">Todos os Psicólogos</h2>
+        <div class="row g-4" id="cards-container"></div>
+      </div>
+    </section>
+
+    <section id="sobre-aluno" class="aluno-section py-5">
+      <div class="container">
+        <h2 class="mb-4 section-title">Informações do(a) Aluno(a)</h2>
+        <div class="row g-4">
+          <div class="col-12 col-md-7">
+            <h6 class="fw-bold mb-2" style="color: var(--azul);">Sobre</h6>
+            <p class="aluno-sobre">
+              Este projeto foi desenvolvido como parte do Trabalho Prático da disciplina de
+              Desenvolvimento Web Front-End da PUC Minas. O site <strong>Psicologia para Todos</strong>
+              é uma aplicação dedicada a conectar pessoas com profissionais de psicologia qualificados,
+              promovendo o acesso à saúde mental de forma prática e acessível. 
+            </p>
+          </div>
+          <div class="col-12 col-md-5">
+            <h6 class="fw-bold mb-3" style="color: var(--azul);">Autoria</h6>
+            <div class="autoria-card">
+              <div class="autoria-avatar">
+                <i class="bi bi-person-fill"></i>
+              </div>
+              <div class="autoria-info">
+                <strong>Izabelle Lopes</strong>
+                <span>Aluno(a): Izabelle Lopes Ribeiro</span>
+                <span>Curso: Análise e Desenvolvimento de Sistemas</span>
+                <span>Turma: Noite</span>
+              </div>
+            </div>
+            <div class="redes-sociais">
+              <span>Redes Sociais:</span>
+              <a href="#" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" title="Instagram"><i class="bi bi-instagram"></i></a>
+              <a href="#" title="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer id="contato" class="footer py-4">
+    <div class="container text-center">
+      <p class="mb-2">© 2025 Psicologia para Todos</p>
+      <div class="d-flex justify-content-center gap-3">
+        <a href="#" class="footer-link">Instagram</a>
+        <a href="#" class="footer-link">LinkedIn</a>
+        <a href="#" class="footer-link">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
